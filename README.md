@@ -11,7 +11,9 @@
 <pre class="notranslate"><code class="notranslate">1.0:
     - First Release
 1.1:
-    - Fixed connection to mysql, now in plugin you don`t need to write your information from mysql server, it takes information from registration system <br />    - Add UTF-8 support<br />    - Fixed some parametrs
+    - Fixed connection to mysql, now in plugin you don`t need to write your information from mysql server, it takes information from registration system <br />  
+    - Add UTF-8 support<br />    
+    - Fixed some parametrs
 <br /></code></pre>
 </div>
 
