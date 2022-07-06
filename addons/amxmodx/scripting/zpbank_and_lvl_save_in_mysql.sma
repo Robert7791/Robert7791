@@ -1,4 +1,5 @@
 #include < amxmodx >
+#include <amxmisc>
 #include < sqlx >
 #include <zombie_plague_special>
 #include <zpsp_xp_system>
@@ -30,7 +31,14 @@ public plugin_init( )
     register_clcmd("logining", "CheckLogAndReg")
 }
 
-public plugin_cfg( ) SQL_LoadDebug( ); //Load Mysql
+public plugin_cfg()
+{
+	new szConfigsDir[64];
+	get_configsdir(szConfigsDir, charsmax(szConfigsDir));
+	server_cmd("exec %s/registersystem.cfg", szConfigsDir);
+	set_task(0.1, "SQL_LoadDebug", 1243364);
+} //Load Mysql
+
 public plugin_end( )
 {
     if( g_hDBTuple )
@@ -147,7 +155,7 @@ public SQL_LoadDebug()
         }
         SQL_FreeHandle( hQueries );
     }
-
+    server_print("[ZPBANK AND LVL] MYSQL connection succesful!")
 }
 
 public SQL_QueryConnection( iState, Handle: hQuery, szError[ ], iErrorCode, iParams[ ], iParamsSize )
