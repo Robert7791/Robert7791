@@ -14,6 +14,8 @@
     - Fixed connection to mysql, now in plugin you don`t need to write your information from mysql server, it takes information from registration system <br />  
     - Add UTF-8 support<br />    
     - Fixed some parametrs
+1.2:
+    - Fixed some parametrs
 <br /></code></pre>
 </div>
 
